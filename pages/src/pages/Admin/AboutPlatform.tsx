@@ -17,7 +17,7 @@ import {
   TeamOutlined,
   DatabaseOutlined,
 } from '@ant-design/icons';
-import { Apisystem } from '../../posts/api';
+import { systemApi } from '../../posts/api';
 
 interface SystemInfo {
   version?: string;
@@ -39,7 +39,7 @@ const AboutPlatform: React.FC = () => {
     const fetchSystemInfo = async () => {
       try {
         setLoading(true);
-        const response = await Apisystem.getSystemInfo();
+        const response = await systemApi.getSystemInfo();
         
         if (response.flag && response.data) {
           setSystemInfo(response.data);

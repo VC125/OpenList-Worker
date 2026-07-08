@@ -544,9 +544,3 @@ export const taskApi = {
 };
 const api = apiService;
 export default api;
-// ====== 系统管理相关 API ======
-export const systemApi = {
-  // 获取系统信息
-  getSystemInfo: () => apiService.get('/@system/info/none'),
-  // 如果有其他方法，按需添加
-};

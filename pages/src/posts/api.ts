@@ -542,5 +542,14 @@ export const taskApi = {
     clearSucceeded: (type: string) =>
         apiService.post(`/api/task/${type}/clear_succeeded`, {}),
 };
+// ====== 系统管理相关 API ======
+export const systemApi = {
+  // 获取系统信息（对应后端 /@system/info/none）
+  getSystemInfo: () => apiService.get('/@system/info/none'),
+  
+  // 如果需要其他接口，可以按需添加，例如：
+  // getHealth: () => apiService.get('/health'),
+  // getStats: () => apiService.get('/api/admin/stats'),
+};
 const api = apiService;
 export default api;

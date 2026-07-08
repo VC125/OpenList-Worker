@@ -542,6 +542,5 @@ export const taskApi = {
     clearSucceeded: (type: string) =>
         apiService.post(`/api/task/${type}/clear_succeeded`, {}),
 };
-
 const api = apiService;
 export default api;

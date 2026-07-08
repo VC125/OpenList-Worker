@@ -542,6 +542,9 @@ export const taskApi = {
     clearSucceeded: (type: string) =>
         apiService.post(`/api/task/${type}/clear_succeeded`, {}),
 };
-
+export const systemApi = {
+  getSystemInfo: () => apiService.get('/@system/info/none'),
+  // 其他系统接口...
+};
 const api = apiService;
 export default api;
